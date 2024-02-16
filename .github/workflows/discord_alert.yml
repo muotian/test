@@ -2,7 +2,7 @@ name: Discord Noon Alert
 
 on:
   schedule:
-    - cron:  '* * * * *'
+    - cron:  '* 10 * * *'
 
 jobs:
   message:
