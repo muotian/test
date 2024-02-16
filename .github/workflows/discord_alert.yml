@@ -1,6 +1,8 @@
+name: Discord Noon Alert
+
 on:
   schedule:
-    - cron:  '* * * * *'
+    - cron:  '0 12 * * *'
 
 jobs:
   message:
