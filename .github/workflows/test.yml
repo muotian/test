@@ -2,7 +2,7 @@ name: Discord Alert
 
 on:
   schedule:
-    - cron:  '* 10 * * *'
+    - cron:  '0 11 * * *'
   push:
     branches:
       - main
@@ -16,4 +16,4 @@ jobs:
       uses: tsickert/discord-webhook@v5.3.0
       with:
         webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
-        content: "Test"
+        content: "<@914667976245014548> 該減肥啦"
