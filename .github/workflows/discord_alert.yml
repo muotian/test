@@ -1,16 +1,13 @@
-name: Discord Noon Alert
-
 on:
   schedule:
-    - cron: '* * * * *' # Runs every day at noon (UTC time)
+    - cron:  '* * * * *'
 
 jobs:
-  discord-alert:
+  message:
     runs-on: ubuntu-latest
     steps:
-      - name: Send Noon Discord Notification
-        uses: tsickert/discord-webhook@v5.4.0
-            
-        with:
-          webhook: ${{ secrets.DISCORD_WEBHOOK }}
-          message: 'It\'s noon! 🕛'
+    - name: Discord Webhook Action
+      uses: tsickert/discord-webhook@v5.3.0
+      with:
+        webhook-url: ${{ secrets.WEBHOOK_URL }}
+        content: "Test"
