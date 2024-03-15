@@ -2,7 +2,7 @@ name: Discord Alert
 
 on:
   schedule:
-    - cron:  '0 0 * * *'
+    - cron:  '* * * * *'
   push:
     branches:
       - main
